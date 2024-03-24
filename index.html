@@ -35,7 +35,9 @@
             <li><a class="nav-link" href="">Contact</a></li>
           </ul>
         </nav>
-        <button class="header-btn" type="button">Order Now</button>
+        <button data-modal-open class="header-btn" type="button">
+          Order Now
+        </button>
       </div>
     </header>
 
@@ -59,7 +61,11 @@
 
       <section class="offerings">
         <div class="container">
-          <img src="./images/aple.png" alt="apple" />
+          <div class="offering-img-border">
+            <div class="img-wraper">
+              <img class="offering-img" src="./images/aple.png" alt="apple" />
+            </div>
+          </div>
           <div class="offerings-wraper">
             <h2 class="offerings-title">What’s Special About Our Offerings</h2>
             <p class="offerings-text">
@@ -157,7 +163,33 @@
           </p>
           <ul class="customers-list">
             <li class="customers-item">
-            <img src="./images/stars.svg" alt="">
+              <ul class="customers-list-icons">
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+              </ul>
               <p class="customers-text">
                 “The Best app I have used to order food in a while, so many
                 options to choose from too, I would recommend to a freind, No
@@ -171,14 +203,39 @@
                   height="48"
                 />
                 <div>
-                <h3 class="customers-name">Sumith Shah</h3>
-                <p class="customers-name-text">Some Dude</p></div>
+                  <h3 class="customers-name">Sumith Shah</h3>
+                  <p class="customers-name-text">Some Dude</p>
+                </div>
               </div>
             </li>
             <li class="customers-item">
-              <svg class="customers-stars" width="101" height="16">
-                <use href="./images/stars.svg"></use>
-              </svg>
+              <ul class="customers-list-icons">
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="customers-icons" width="17" height="17">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </li>
+              </ul>
               <p class="customers-text">
                 “The ease with which I can just go in and order what i want was
                 amazing, It has been a very pleasant experience ordering from
@@ -186,7 +243,7 @@
               </p>
               <div class="customers-container">
                 <img
-                  src="./images/Ellipse _10.png"
+                  src="./images/Ellipse_10.png"
                   alt="Sumith Shah"
                   width="48"
                   height="48"
@@ -246,31 +303,66 @@
               /><button class="footer-btn" type="submit">Subscribe</button>
             </form>
             <p class="footer-subtitle">
-              By subscribing you agree to with our <a class="footer-list-text" href="">Privacy Policy</a>
+              By subscribing you agree to with our
+              <a class="footer-list-text" href="">Privacy Policy</a>
             </p>
           </div>
         </div>
-        
-          <div class="adress">
-            <ul class="footer-list">
-              <li><a class="footer-list-text" href="">Privacy Policy</a></li>
-              <li><a class="footer-list-text" href="">Terms of Service</a></li>
-              <li><a class="footer-list-text" href="">Cookies Settings</a></li>
-            </ul>
-            <p>2022 FoodSta. All right reserved.</p>
-          </div>
+
+        <div class="adress">
+          <ul class="footer-list">
+            <li><a class="footer-list-text" href="">Privacy Policy</a></li>
+            <li><a class="footer-list-text" href="">Terms of Service</a></li>
+            <li><a class="footer-list-text" href="">Cookies Settings</a></li>
+          </ul>
+          <p>2022 FoodSta. All right reserved.</p>
+        </div>
+      </div>
     </footer>
 
-<div class="backdrop">
-  <div class="modal">
-    <button class="modal-close-btn">
-      <svg class="modal-close-icon">
-        <use></use>
-      </svg>
-    </button>
-    <p class="modal-title"></p>
-  </div>
-</div>
-  
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="modal-close-btn" type="button">
+          <svg class="modal-close-icon" width="11" height="11">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Order Form</p>
+        <form>
+          <div class="form-field">
+            <label for="user-name" class="modal-label">Name</label
+            ><input
+              id="user-name"
+              name="user-name"
+              type="text"
+              class="modal-input"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="form-field">
+            <label for="user-phone" class="modal-label">Phone number</label
+            ><input
+              id="user-phone"
+              name="user-phone"
+              type="tel"
+              class="modal-input"
+              placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            />
+          </div>
+          <div class="form-field-mail">
+            <label for="user-mail" class="modal-label">E-mail</label
+            ><input
+              id="user-mail"
+              name="user-mail"
+              type="email"
+              class="modal-input"
+              placeholder="example@gmail.com"
+            />
+          </div>
+          <button type="submit" class="modal-btn">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
