@@ -12,8 +12,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -157,9 +157,7 @@
           </p>
           <ul class="customers-list">
             <li class="customers-item">
-              <svg class="customers-stars" width="101" height="16">
-                <use href="./images/stars.svg"></use>
-              </svg>
+            <img src="./images/stars.svg" alt="">
               <p class="customers-text">
                 “The Best app I have used to order food in a while, so many
                 options to choose from too, I would recommend to a freind, No
@@ -172,8 +170,9 @@
                   width="48"
                   height="48"
                 />
+                <div>
                 <h3 class="customers-name">Sumith Shah</h3>
-                <p class="customers-name-text">Some Dude</p>
+                <p class="customers-name-text">Some Dude</p></div>
               </div>
             </li>
             <li class="customers-item">
@@ -261,5 +260,17 @@
             <p>2022 FoodSta. All right reserved.</p>
           </div>
     </footer>
+
+<div class="backdrop">
+  <div class="modal">
+    <button class="modal-close-btn">
+      <svg class="modal-close-icon">
+        <use></use>
+      </svg>
+    </button>
+    <p class="modal-title"></p>
+  </div>
+</div>
+  
   </body>
 </html>
